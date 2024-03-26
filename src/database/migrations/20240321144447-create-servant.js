@@ -3,26 +3,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('profilesUsersInstitutes', {
+    await queryInterface.createTable('servants', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
-      profileId: {
+      positionId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'profiles',
-          key: 'id'
-        }
-      },
-      instituteId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'institutes',
+          model: 'positions',
           key: 'id'
         }
       },
@@ -33,6 +25,26 @@ module.exports = {
           model: 'users',
           key: 'id'
         }
+      },
+      regionalId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'regionals',
+          key: 'id'
+        }
+      },
+      functionalEmail: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      loadWorkload: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      officialAct: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       initialDate: {
         type: Sequelize.DATE,
@@ -59,7 +71,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('profilesUsersInstitutes');
+    await queryInterface.dropTable('servants');
   }
 };
 

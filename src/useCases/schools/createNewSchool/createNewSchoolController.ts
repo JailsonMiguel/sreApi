@@ -8,10 +8,17 @@ export class CreateNewSchoolController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { instituteId, regionalId, inepCode, isActive } = req.body;
+      const {
+        instituteId,
+        regionalId,
+        schoolSupervisorId,
+        inepCode,
+        isActive
+      } = req.body;
       await this.createNewSchoolUseCase.handle({
         instituteId,
         regionalId,
+        schoolSupervisorId,
         inepCode,
         isActive
       });

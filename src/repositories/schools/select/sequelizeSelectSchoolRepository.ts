@@ -1,12 +1,43 @@
 import { ISchoolProps } from '../../../interfaces/props/ISchoolProps';
+import { InstituteModel } from '../../../models/instituteModel';
+import { RegionalModel } from '../../../models/regionalModel';
 import { SchoolModel } from '../../../models/schoolModel';
+import { ServantModel } from '../../../models/servantModel';
+import { UserModel } from '../../../models/userModel';
 import { ISelectSchoolRepository } from './ISelectSchoolInterface';
 
 export class SequelizeSelectSchoolRepository
   implements ISelectSchoolRepository
 {
   async getAllSchools(): Promise<ISchoolProps[]> {
-    const allSchools = await SchoolModel.findAll();
+    const allSchools = await SchoolModel.findAll({
+      include: [
+        {
+          model: ServantModel,
+          as: 'servant',
+          include: [
+            {
+              model: UserModel,
+              as: 'user'
+            }
+          ]
+        },
+        {
+          model: InstituteModel,
+          as: 'institute'
+        },
+        {
+          model: RegionalModel,
+          as: 'regional',
+          include: [
+            {
+              model: InstituteModel,
+              as: 'institute'
+            }
+          ]
+        }
+      ]
+    });
     return allSchools;
   }
 

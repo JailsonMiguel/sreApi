@@ -32,7 +32,7 @@ PositionModel.init(
     },
     finalDate: {
       type: sequelize.DATE,
-      allowNull: false
+      allowNull: true
     },
     isActive: {
       type: sequelize.BOOLEAN,

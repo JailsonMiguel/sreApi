@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import { CreateNewProfileUserInstituteController } from '../useCases/profileUserInstitute/createNewProfileUserInstitute/createNewProfileUserInstituteController';
 import { getAllProfilesUsersInsitutesController } from '../useCases/profileUserInstitute/getAllProfilesUsersInstitutes';
 import { createNewProfileUserInstituteController } from '../useCases/profileUserInstitute/createNewProfileUserInstitute';
 import { updateProfileUserInstituteController } from '../useCases/profileUserInstitute/updateProfileUserInstitute';

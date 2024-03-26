@@ -1,6 +1,6 @@
 import { IRegionalProps } from '../../../interfaces/props/IRegionalProps';
 
 export interface ISelectRegionalRepository {
-  verifyIfAlredyByInstitute(idInstitute: IRegionalProps): Promise<boolean>;
+  verifyIfAlredyByInstitute(instituteId: IRegionalProps): Promise<boolean>;
   getAllRegionals(): Promise<IRegionalProps[]>;
 }

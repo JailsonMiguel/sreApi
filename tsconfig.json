@@ -8,5 +8,5 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./build"
   },
-  "include": ["./src/**/*.ts", "*.env", "*.json", "package.json", "index.y.ts"]
+  "include": ["./src/**/*.ts", "*.env", "*.json", "package.json", "index.y.ts", "src/database/config/databaseCli.js"]
 }

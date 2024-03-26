@@ -1,5 +1,8 @@
 import { IProfileUserInstituteProps } from '../../../interfaces/props/IProfileUserInstituteProps';
+import { InstituteModel } from '../../../models/instituteModel';
+import { ProfileModel } from '../../../models/profileModel';
 import { ProfileUserInstituteModel } from '../../../models/profileUserInstituteModel';
+import { UserModel } from '../../../models/userModel';
 import { ISelectProfileUserInstituteRepository } from './ISelectProfileUserInstituteInterface';
 
 export class SequelizeSelectProfileUserInstituteRepository
@@ -44,8 +47,22 @@ export class SequelizeSelectProfileUserInstituteRepository
   }
 
   async getAllProfileUserInstitute(): Promise<IProfileUserInstituteProps[]> {
-    const allProfilesUsersInstitutes =
-      await ProfileUserInstituteModel.findAll();
+    const allProfilesUsersInstitutes = await ProfileUserInstituteModel.findAll({
+      include: [
+        {
+          model: ProfileModel,
+          as: 'profile'
+        },
+        {
+          model: InstituteModel,
+          as: 'institute'
+        },
+        {
+          model: UserModel,
+          as: 'user'
+        }
+      ]
+    });
     return allProfilesUsersInstitutes;
   }
 }

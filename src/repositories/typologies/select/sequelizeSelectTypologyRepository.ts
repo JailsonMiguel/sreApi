@@ -1,4 +1,7 @@
 import { ITypologyProps } from '../../../interfaces/props/ITypologyProps';
+import { InstituteModel } from '../../../models/instituteModel';
+import { PositionModel } from '../../../models/positionModel';
+import { RegionalModel } from '../../../models/regionalModel';
 import { TypologyModel } from '../../../models/tipologyModel';
 import { ISelectTypologyRepository } from './ISelectTypologyInterface';
 
@@ -16,7 +19,24 @@ export class SequelizeSelectTypologyRepository
   }
 
   async getAllTypologies(): Promise<ITypologyProps[]> {
-    const allTypologies = await TypologyModel.findAll();
+    const allTypologies = await TypologyModel.findAll({
+      include: [
+        {
+          model: PositionModel,
+          as: 'position'
+        },
+        {
+          model: RegionalModel,
+          as: 'regional',
+          include: [
+            {
+              model: InstituteModel,
+              as: 'institute'
+            }
+          ]
+        }
+      ]
+    });
     return allTypologies;
   }
 

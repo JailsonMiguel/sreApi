@@ -24,7 +24,7 @@ module.exports = {
       },
       finalDate: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: true
       },
       isActive: {
         type: Sequelize.BOOLEAN,
@@ -46,4 +46,3 @@ module.exports = {
     await queryInterface.dropTable('positions');
   }
 };
-

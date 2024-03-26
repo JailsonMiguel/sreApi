@@ -26,6 +26,14 @@ module.exports = {
           key: 'id'
         }
       },
+      schoolSupervisorId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'servants',
+          key: 'id'
+        }
+      },
       inepCode: {
         type: Sequelize.STRING,
         allowNull: false

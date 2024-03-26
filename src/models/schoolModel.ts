@@ -2,11 +2,13 @@ import db from '../database';
 import sequelize, { Model } from 'sequelize';
 import { InstituteModel } from './instituteModel';
 import { RegionalModel } from './regionalModel';
+import { ServantModel } from './servantModel';
 
 export class SchoolModel extends Model {
   declare id?: number;
   declare instituteId: number;
   declare regionalId: number;
+  declare schoolSupervisorId: number;
   declare inepCode: string;
   declare isActive: boolean;
 }
@@ -32,6 +34,14 @@ SchoolModel.init(
       allowNull: false,
       references: {
         model: 'regionals',
+        key: 'id'
+      }
+    },
+    schoolSupervisorId: {
+      type: sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'servants',
         key: 'id'
       }
     },
@@ -73,7 +83,18 @@ RegionalModel.hasOne(SchoolModel, {
   as: 'school',
   foreignKey: 'regionalId'
 });
+
 SchoolModel.belongsTo(RegionalModel, {
   as: 'regional',
   foreignKey: 'regionalId'
+});
+
+ServantModel.hasOne(SchoolModel, {
+  as: 'school',
+  foreignKey: 'schoolSupervisorId'
+});
+
+SchoolModel.belongsTo(ServantModel, {
+  as: 'servant',
+  foreignKey: 'schoolSupervisorId'
 });
