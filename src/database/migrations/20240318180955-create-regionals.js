@@ -7,8 +7,7 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
-        allowNull: false,
-        autoIncrement: true
+        allowNull: false
       },
       instituteId: {
         type: Sequelize.INTEGER,
@@ -17,6 +16,14 @@ module.exports = {
           model: 'institutes',
           key: 'id'
         }
+      },
+      unitSgeCode: {
+        type: Sequelize.BIGINT,
+        allowNull: true
+      },
+      network: {
+        type: Sequelize.INTEGER,
+        allowNull: true
       },
       isActive: {
         type: Sequelize.BOOLEAN,

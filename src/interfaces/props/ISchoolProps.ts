@@ -2,7 +2,7 @@ export interface ISchoolProps {
   id?: number;
   instituteId: number;
   regionalId: number;
-  schoolSupervisorId: number;
-  inepCode: string;
+  schoolInep: string;
+  urban: boolean;
   isActive: boolean;
 }

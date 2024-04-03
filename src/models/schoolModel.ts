@@ -2,14 +2,13 @@ import db from '../database';
 import sequelize, { Model } from 'sequelize';
 import { InstituteModel } from './instituteModel';
 import { RegionalModel } from './regionalModel';
-import { ServantModel } from './servantModel';
 
 export class SchoolModel extends Model {
   declare id?: number;
   declare instituteId: number;
   declare regionalId: number;
-  declare schoolSupervisorId: number;
-  declare inepCode: string;
+  declare schoolInep: string;
+  declare urban: boolean;
   declare isActive: boolean;
 }
 
@@ -18,8 +17,7 @@ SchoolModel.init(
     id: {
       type: sequelize.INTEGER,
       primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
+      allowNull: false
     },
     instituteId: {
       type: sequelize.INTEGER,
@@ -37,17 +35,13 @@ SchoolModel.init(
         key: 'id'
       }
     },
-    schoolSupervisorId: {
-      type: sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'servants',
-        key: 'id'
-      }
-    },
-    inepCode: {
+    schoolInep: {
       type: sequelize.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    urban: {
+      type: sequelize.BOOLEAN,
+      allowNull: true
     },
     isActive: {
       type: sequelize.BOOLEAN,
@@ -87,14 +81,4 @@ RegionalModel.hasOne(SchoolModel, {
 SchoolModel.belongsTo(RegionalModel, {
   as: 'regional',
   foreignKey: 'regionalId'
-});
-
-ServantModel.hasOne(SchoolModel, {
-  as: 'school',
-  foreignKey: 'schoolSupervisorId'
-});
-
-SchoolModel.belongsTo(ServantModel, {
-  as: 'servant',
-  foreignKey: 'schoolSupervisorId'
 });

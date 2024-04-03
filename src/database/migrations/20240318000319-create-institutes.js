@@ -8,11 +8,18 @@ module.exports = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true
       },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+      address: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      ibgeCityCode: {
+        type: Sequelize.BIGINT,
+        allowNull: true,
       },
       type: {
         type: Sequelize.INTEGER,

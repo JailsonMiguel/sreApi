@@ -13,16 +13,6 @@ export class SequelizeSelectSchoolRepository
     const allSchools = await SchoolModel.findAll({
       include: [
         {
-          model: ServantModel,
-          as: 'servant',
-          include: [
-            {
-              model: UserModel,
-              as: 'user'
-            }
-          ]
-        },
-        {
           model: InstituteModel,
           as: 'institute'
         },

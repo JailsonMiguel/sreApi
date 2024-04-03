@@ -8,8 +8,9 @@ export class CreateNewRegionalController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { instituteId, isActive } = req.body;
+      const { id, instituteId, isActive } = req.body;
       await this.createNewRegionalUseCase.handle({
+        id,
         instituteId,
         isActive
       });

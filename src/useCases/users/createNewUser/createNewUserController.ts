@@ -8,8 +8,9 @@ export class CreateNewUserController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { name, cpf, dateBirth, email, isActive } = req.body;
+      const { id, name, cpf, dateBirth, email, isActive } = req.body;
       await this.createNewUserUseCase.handle({
+        id,
         name,
         cpf,
         dateBirth,

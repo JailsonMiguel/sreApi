@@ -3,34 +3,35 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('schools', {
+    await queryInterface.createTable('schoolSupervisors', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
+      },
+      schoolId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'schools',
+          key: 'id'
+        }
+      },
+      schoolSupervisorId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'servants',
+          key: 'id'
+        }
+      },
+      initialDate: {
+        type: Sequelize.DATE,
         allowNull: false
       },
-      instituteId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'institutes',
-          key: 'id'
-        }
-      },
-      regionalId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'regionals',
-          key: 'id'
-        }
-      },
-      schoolInep: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      urban: {
-        type: Sequelize.BOOLEAN,
+      finalDate: {
+        type: Sequelize.DATE,
         allowNull: true
       },
       isActive: {
@@ -48,8 +49,7 @@ module.exports = {
       }
     });
   },
-
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('schools');
+    await queryInterface.dropTable('schoolSupervisors');
   }
 };

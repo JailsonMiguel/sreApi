@@ -5,6 +5,8 @@ import { InstituteModel } from './instituteModel';
 export class RegionalModel extends Model {
   declare id?: number;
   declare instituteId: number;
+  declare unitSgeCode: number;
+  declare network: number;
   declare isActive: boolean;
 }
 
@@ -14,11 +16,22 @@ RegionalModel.init(
       type: sequelize.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement: true
     },
     instituteId: {
       type: sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'institutes',
+        key: 'id',
+      },
+    },
+    unitSgeCode: {
+      type: sequelize.INTEGER,
+      allowNull: true,
+    },
+    network: {
+      type: sequelize.INTEGER,
+      allowNull: true,
     },
     isActive: {
       type: sequelize.BOOLEAN,
