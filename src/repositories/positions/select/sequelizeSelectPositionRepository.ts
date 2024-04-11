@@ -22,4 +22,12 @@ export class SequelizeSelectPositionRepository
       return false;
     }
   }
+  async getPositionByName(name: string): Promise<IPositionProps[]> {
+    const allPositions = await PositionModel.findAll({
+      where: {
+        name: name,
+      }
+    });
+    return allPositions;
+  }
 }
