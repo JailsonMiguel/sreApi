@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { CreateNewConsultantUseCase } from './createNewConsultantUseCase';
+import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewConsultantController {
   private createNewConsultantUseCase: CreateNewConsultantUseCase;
@@ -9,6 +10,9 @@ export class CreateNewConsultantController {
   handle = async (req: Request, res: Response) => {
     try {
       const { description, isActive } = req.body;
+      if (!description) {
+        throw new sreError('Campo obrigatório não preenchido!', 'Erro');
+      }
       await this.createNewConsultantUseCase.handle({
         description,
         isActive
