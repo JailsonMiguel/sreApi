@@ -15,7 +15,7 @@ export class CreateNewPositionUseCase {
   }
   async handle(positionProps: IPositionProps) {
     const positionAlredyExists =
-      await this.selectPositionRepository.verifyIfAlredyByName(positionProps);
+      await this.selectPositionRepository.verifyIfAlredyBySubarea(positionProps);
     if (positionAlredyExists) {
       throw new sreError('Função já cadastrada', 'Função já cadastrada');
     } else {

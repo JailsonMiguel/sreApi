@@ -8,10 +8,12 @@ export class CreateNewPositionController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { name, description, initialDate, finalDate, isActive } = req.body;
+      const { teamId, subarea, parameter, sector, initialDate, finalDate, isActive } = req.body;
       await this.createNewPositionUseCase.handle({
-        name,
-        description,
+        teamId,
+        subarea,
+        parameter,
+        sector,
         initialDate,
         finalDate,
         isActive

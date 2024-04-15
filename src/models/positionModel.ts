@@ -1,10 +1,13 @@
 import db from '../database';
 import sequelize, { Model } from 'sequelize';
+import { TeamModel } from './teamModel';
 
 export class PositionModel extends Model {
   declare id?: number;
-  declare name: string;
-  declare description: string;
+  declare teamId: number;
+  declare subarea: string;
+  declare parameter: string;
+  declare sector: string;
   declare initialDate: Date;
   declare finalDate: Date;
   declare isActive: boolean;
@@ -18,13 +21,25 @@ PositionModel.init(
       allowNull: false,
       autoIncrement: true
     },
-    name: {
-      type: sequelize.STRING,
-      allowNull: false
+    teamId: {
+      type: sequelize.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'teams',
+        key: 'id'
+      }
     },
-    description: {
+    subarea: {
       type: sequelize.STRING,
-      allowNull: false
+      allowNull: true
+    },
+    parameter: {
+      type: sequelize.STRING,
+      allowNull: true
+    },
+    sector: {
+      type: sequelize.STRING,
+      allowNull: true
     },
     initialDate: {
       type: sequelize.DATE,
@@ -53,3 +68,13 @@ PositionModel.init(
     tableName: 'positions'
   }
 );
+
+TeamModel.hasOne(PositionModel, {
+  as: 'position',
+  foreignKey: 'teamId'
+});
+
+PositionModel.belongsTo(TeamModel, {
+  as: 'team',
+  foreignKey: 'teamId'
+});

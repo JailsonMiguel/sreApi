@@ -1,3 +1,7 @@
 import { IPositionProps } from '../props/IPositionProps';
+import { ITeamProps } from '../props/ITeamProps';
 
-type IGetPositionInterface = IPositionProps[];
+type IGetPositionInterface = {
+  position: IPositionProps;
+  team: ITeamProps;
+}[];

@@ -2,6 +2,7 @@ import { Regional } from '../../../entities/regional';
 import { ISchoolSupervisorProps } from '../../../interfaces/props/ISchoolSupervisorProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { RegionalModel } from '../../../models/regionalModel';
+import { SchoolModel } from '../../../models/schoolModel';
 import { SchoolSupervisorModel } from '../../../models/schoolSupervisorModel';
 import { ServantModel } from '../../../models/servantModel';
 import { UserModel } from '../../../models/userModel';
@@ -23,13 +24,13 @@ export class SequelizeSelectSchoolSupervisorRepository
             }
           ]
         },
+        // {
+        //   model: InstituteModel,
+        //   as: 'institute'
+        // },
         {
-          model: InstituteModel,
-          as: 'institute'
-        },
-        {
-          model: RegionalModel,
-          as: 'regional',
+          model: SchoolModel,
+          as: 'school',
           include: [
             {
               model: InstituteModel,

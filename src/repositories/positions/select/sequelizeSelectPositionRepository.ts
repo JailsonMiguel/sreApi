@@ -10,10 +10,10 @@ export class SequelizeSelectPositionRepository
     return allPositions;
   }
 
-  async verifyIfAlredyByName(position: IPositionProps): Promise<boolean> {
+  async verifyIfAlredyBySubarea(position: IPositionProps): Promise<boolean> {
     const existsPosition = await PositionModel.findOne({
       where: {
-        name: position.name
+        subarea: position.subarea
       }
     });
     if (existsPosition) {
@@ -22,10 +22,20 @@ export class SequelizeSelectPositionRepository
       return false;
     }
   }
-  async getPositionByName(name: string): Promise<IPositionProps[]> {
+
+  async getPositionBySubarea(subarea: string): Promise<IPositionProps[]> {
     const allPositions = await PositionModel.findAll({
       where: {
-        name: name,
+        subarea: subarea
+      }
+    });
+    return allPositions;
+  }
+
+  async getPositionBySector(sector: string): Promise<IPositionProps[]> {
+    const allPositions = await PositionModel.findAll({
+      where: {
+        sector: sector
       }
     });
     return allPositions;

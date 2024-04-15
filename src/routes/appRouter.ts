@@ -9,6 +9,8 @@ import { profileUserInstituteRouter } from './profileUserInstitute';
 import { servantRouter } from './servant';
 import { regionalRouter } from './regional';
 import { schoolSupervisorRouter } from './schoolSupervisor';
+import { consultantRouter } from './consultant';
+import { teamRouter } from './team';
 
 const appRouter = Router();
 
@@ -22,5 +24,7 @@ appRouter.use(typologyRouter);
 appRouter.use(profileUserInstituteRouter);
 appRouter.use(servantRouter);
 appRouter.use(schoolSupervisorRouter);
+appRouter.use(consultantRouter);
+appRouter.use(teamRouter);
 
 export { appRouter };
