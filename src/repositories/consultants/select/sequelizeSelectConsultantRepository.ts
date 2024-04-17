@@ -6,7 +6,11 @@ export class SequelizeSelectConsultantRepository
   implements ISelectConsultantRepository
 {
   async getAllConsultants(): Promise<IConsultantProps[]> {
-    const allConsultants = await ConsultantModel.findAll();
+    const allConsultants = await ConsultantModel.findAll({
+      order: [
+        ['isActive', 'DESC'],
+        ['description', 'ASC']]
+    });
     return allConsultants;
   }
 
