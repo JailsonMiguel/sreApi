@@ -37,7 +37,12 @@ export class SequelizeSelectSchoolSupervisorRepository
               as: 'institute'
             }
           ]
-        }
+        },
+        
+      ],
+      order: [
+        ['isActive','DESC'],
+        ['initialDate','ASC']
       ]
     });
     return allSchoolSupervisors;

@@ -14,7 +14,11 @@ export class SequelizeSelectProfileRepository
     const existsProfile = await ProfileModel.findOne({
       where: {
         name: profile.name
-      }
+      },
+      order: [
+        ['isActive','DESC'],
+        ['name', 'ASC']
+      ]
     });
     if (existsProfile) {
       return true;

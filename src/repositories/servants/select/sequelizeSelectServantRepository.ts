@@ -15,7 +15,11 @@ export class SequelizeSelectServantRepository
       where: {
         positionId: positionId,
         isActive: true
-      }
+      },
+      order: [
+        ['isActive','DESC'],
+        ['initialDate','ASC']
+      ]
     });
     return allServants;
   }

@@ -6,7 +6,12 @@ export class SequelizeSelectInstituteRepository
   implements ISelectInstituteRepository
 {
   async getAllInstitutes(): Promise<IInstituteProps[]> {
-    const allInstitutes = await InstituteModel.findAll();
+    const allInstitutes = await InstituteModel.findAll({
+      order: [
+        ['isActive','DESC'],
+        ['name','ASC']
+      ]
+    });
     return allInstitutes;
   }
 

@@ -6,7 +6,13 @@ export class SequelizeSelectPositionRepository
   implements ISelectPositionRepository
 {
   async getAllPositions(): Promise<IPositionProps[]> {
-    const allPositions = await PositionModel.findAll();
+    const allPositions = await PositionModel.findAll({
+      order: [
+        ['isActive','DESC'],
+        ['teamId','ASC'],
+        ['subarea','ASC']
+      ]
+    });
     return allPositions;
   }
 

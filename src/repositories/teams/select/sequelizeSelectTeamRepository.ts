@@ -25,7 +25,11 @@ export class SequelizeSelectTeamRepository implements ISelectTeamRepository {
     const allTeams = await TeamModel.findAll({
       where: {
         consultantId: consultantId
-      }
+      },
+      order: [
+        ['isActive', 'DESC'],
+        ['description', 'ASC']
+      ]
     });
     return allTeams;
   }
