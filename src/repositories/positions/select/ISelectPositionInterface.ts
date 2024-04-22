@@ -5,4 +5,5 @@ export interface ISelectPositionRepository {
   getAllPositions(): Promise<IPositionProps[]>;
   getPositionBySubarea(subarea: string): Promise<IPositionProps[]>;
   getPositionBySector(sector: string): Promise<IPositionProps[]>;
+  getPositionByTeamId(teamId: number): Promise<IPositionProps[]>;
 }

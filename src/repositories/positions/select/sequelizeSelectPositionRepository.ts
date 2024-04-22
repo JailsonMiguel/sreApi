@@ -46,4 +46,16 @@ export class SequelizeSelectPositionRepository
     });
     return allPositions;
   }
+  async getPositionByTeamId(teamId: number): Promise<IPositionProps[]> {
+    const allPositions = await PositionModel.findAll({
+      where: {
+        teamId: teamId
+      },
+      order: [
+        ['isActive', 'DESC'],
+        ['subarea', 'ASC']
+      ]
+    });
+    return allPositions;
+  }
 }
