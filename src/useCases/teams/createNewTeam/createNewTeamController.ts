@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { CreateNewTeamUseCase } from './createNewTeamUseCase';
+import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewTeamController {
   private createNewTeamUseCase: CreateNewTeamUseCase;
@@ -9,11 +10,15 @@ export class CreateNewTeamController {
   handle = async (req: Request, res: Response) => {
     try {
       const { consultantId, description, sector, isActive } = req.body;
-      await this.createNewTeamUseCase.handle({
-        consultantId,
-        description,
-        isActive
-      });
+      if (!description) {
+        throw new sreError('Campo obrigatório não preenchido!', 'Erro');
+      } else {
+        await this.createNewTeamUseCase.handle({
+          consultantId,
+          description,
+          isActive
+        });
+      }
       return res.status(201).json({
         message: 'Equipe criada com sucesso'
       });

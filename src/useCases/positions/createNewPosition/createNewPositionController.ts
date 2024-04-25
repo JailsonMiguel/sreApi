@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { CreateNewPositionUseCase } from './createNewPositionUseCase';
+import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewPositionController {
   private createNewPositionUseCase: CreateNewPositionUseCase;
@@ -9,15 +10,19 @@ export class CreateNewPositionController {
   handle = async (req: Request, res: Response) => {
     try {
       const { teamId, subarea, parameter, sector, initialDate, finalDate, isActive } = req.body;
-      await this.createNewPositionUseCase.handle({
-        teamId,
-        subarea,
-        parameter,
-        sector,
-        initialDate,
-        finalDate,
-        isActive
-      });
+      if (!subarea||!parameter) {
+        throw new sreError('Campo obrigatório não preenchido!', 'Erro');
+      } else {
+        await this.createNewPositionUseCase.handle({
+          teamId,
+          subarea,
+          parameter,
+          sector,
+          initialDate,
+          finalDate,
+          isActive
+        });
+      }
       return res.status(201).json({
         message: 'Função criada com sucesso'
       });
