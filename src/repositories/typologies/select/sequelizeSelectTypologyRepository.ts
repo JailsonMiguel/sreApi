@@ -35,6 +35,10 @@ export class SequelizeSelectTypologyRepository
             }
           ]
         }
+      ],
+      order: [
+        ['isActive', 'DESC'],
+        ['id', 'DESC'],
       ]
     });
     return allTypologies;
