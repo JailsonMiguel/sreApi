@@ -6,4 +6,12 @@ export interface ISelectTypologyRepository {
   ): Promise<boolean>;
   getAllTypologies(): Promise<ITypologyProps[]>;
   getAllActiveByRegional(regionalId: number): Promise<ITypologyProps[]>;
+  getAllTypologyByRegionalAndPosition(
+    regionalId: number,
+    positionId: number
+  ): Promise<ITypologyProps[]>;
+  getActiveByRegionalAndPosition(
+    regionalId: number,
+    positionId: number
+  ): Promise<ITypologyProps>;
 }

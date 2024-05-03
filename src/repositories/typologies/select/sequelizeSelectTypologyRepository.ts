@@ -38,7 +38,7 @@ export class SequelizeSelectTypologyRepository
       ],
       order: [
         ['isActive', 'DESC'],
-        ['id', 'DESC'],
+        ['id', 'DESC']
       ]
     });
     return allTypologies;
@@ -59,5 +59,34 @@ export class SequelizeSelectTypologyRepository
     } else {
       return false;
     }
+  }
+  async getAllTypologyByRegionalAndPosition(
+    regionalId: number,
+    positionId: number
+  ): Promise<ITypologyProps[]> {
+    const getAllTypologies = await TypologyModel.findAll({
+      where: {
+        regionalId: regionalId,
+        positionId: positionId
+      },
+      order: [
+        ['isActive', 'DESC'],
+        ['id', 'DESC']
+      ]
+    });
+    return getAllTypologies;
+  }
+  async getActiveByRegionalAndPosition(
+    regionalId: number,
+    positionId: number
+  ): Promise<ITypologyProps> {
+    const getAllTypologies = await TypologyModel.findOne({
+      where: {
+        regionalId: regionalId,
+        positionId: positionId,
+        isActive: true
+      },
+    });
+    return getAllTypologies;
   }
 }
