@@ -2,19 +2,24 @@ import { Router } from 'express';
 import { getAllSuperintendentsController } from '../useCases/superintendent/getAllSuperintendents';
 import { updateSuperintendentController } from '../useCases/superintendent/updateSuperintendent';
 import { createNewSuperintendentController } from '../useCases/superintendent/createNewSuperintendent';
+import { getAllSuperintendentsByRegionalIdController } from '../useCases/superintendent/getByRegional';
 
-const superintendentsorRouter = Router();
-superintendentsorRouter.post(
+const superintendentRouter = Router();
+superintendentRouter.post(
   '/superintendent',
   createNewSuperintendentController.handle
 );
-superintendentsorRouter.get(
+superintendentRouter.get(
   '/superintendent',
   getAllSuperintendentsController.handle
 );
-superintendentsorRouter.put(
+superintendentRouter.put(
   '/superintendent/:superintendentId',
   updateSuperintendentController.handle
 );
+superintendentRouter.get(
+  '/superintendent/:regionalId',
+  getAllSuperintendentsByRegionalIdController.handle
+);
 
-export { superintendentsorRouter };
+export { superintendentRouter };

@@ -42,9 +42,12 @@ export class SequelizeSelectSuperintendentRepository
   }
 
   async getAllSuperintendentByRegional(
-    regionalId: ISuperintendentProps
+    regionalId: number
   ): Promise<ISuperintendentProps[]> {
     const allSuperintendents = await SuperintendentModel.findAll({
+      where: {
+        regionalId: regionalId
+      },
       include: [
         {
           model: ServantModel,

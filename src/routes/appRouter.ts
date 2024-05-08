@@ -11,6 +11,7 @@ import { regionalRouter } from './regional';
 import { schoolSupervisorRouter } from './schoolSupervisor';
 import { consultantRouter } from './consultant';
 import { teamRouter } from './team';
+import { superintendentRouter } from './superintendent';
 
 const appRouter = Router();
 
@@ -26,5 +27,6 @@ appRouter.use(servantRouter);
 appRouter.use(schoolSupervisorRouter);
 appRouter.use(consultantRouter);
 appRouter.use(teamRouter);
+appRouter.use(superintendentRouter);
 
 export { appRouter };

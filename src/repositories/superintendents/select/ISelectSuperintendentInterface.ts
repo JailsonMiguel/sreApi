@@ -4,6 +4,6 @@ export interface ISelectSuperintendentRepository {
   verifyIfAlredyByRegional(regionalId: ISuperintendentProps): Promise<boolean>;
   getAllSuperintendents(): Promise<ISuperintendentProps[]>;
   getAllSuperintendentByRegional(
-    regionalId: ISuperintendentProps
+    regionalId: number
   ): Promise<ISuperintendentProps[]>;
 }
