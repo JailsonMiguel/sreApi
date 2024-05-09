@@ -1,6 +1,7 @@
 import { IRegionalProps } from '../../../interfaces/props/IRegionalProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { RegionalModel } from '../../../models/regionalModel';
+import { SuperintendentModel } from '../../../models/superintendentModel';
 import { ISelectRegionalRepository } from './ISelectRegionalInterface';
 
 export class SequelizeSelectRegionalRepository
@@ -12,6 +13,10 @@ export class SequelizeSelectRegionalRepository
         {
           model: InstituteModel,
           as: 'institute'
+        },
+        {
+          model: SuperintendentModel,
+          as: 'superintendent'
         }
       ]
     });
