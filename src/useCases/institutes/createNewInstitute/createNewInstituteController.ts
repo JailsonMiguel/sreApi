@@ -8,12 +8,10 @@ export class CreateNewInstituteController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { id, name, address, ibgeCityCode, type, isActive } = req.body;
+      const { id, name, type, isActive } = req.body;
       await this.createNewInstituteUseCase.handle({
         id,
         name,
-        address,
-        ibgeCityCode,
         type,
         isActive
       });

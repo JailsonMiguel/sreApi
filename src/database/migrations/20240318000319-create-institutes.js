@@ -13,14 +13,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      address: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      ibgeCityCode: {
-        type: Sequelize.BIGINT,
-        allowNull: true,
-      },
       type: {
         type: Sequelize.INTEGER,
         allowNull: false
