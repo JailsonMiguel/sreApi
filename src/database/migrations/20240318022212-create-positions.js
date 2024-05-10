@@ -26,7 +26,12 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      sector: {
+      code: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+      },
+      name: {
         type: Sequelize.STRING,
         allowNull: true
       },

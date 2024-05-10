@@ -3,7 +3,8 @@ export interface IPositionProps {
   teamId: number;
   subarea: string;
   parameter: string;
-  sector: string;
+  code: string;
+  name: string;
   initialDate: Date;
   finalDate: Date;
   isActive: boolean;

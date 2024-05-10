@@ -9,15 +9,25 @@ export class CreateNewPositionController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { teamId, subarea, parameter, sector, initialDate, finalDate, isActive } = req.body;
-      if (!subarea||!parameter) {
+      const {
+        teamId,
+        subarea,
+        parameter,
+        code,
+        name,
+        initialDate,
+        finalDate,
+        isActive
+      } = req.body;
+      if (!subarea || !parameter) {
         throw new sreError('Campo obrigatório não preenchido!', 'Erro');
       } else {
         await this.createNewPositionUseCase.handle({
           teamId,
           subarea,
           parameter,
-          sector,
+          code,
+          name,
           initialDate,
           finalDate,
           isActive

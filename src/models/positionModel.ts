@@ -7,7 +7,8 @@ export class PositionModel extends Model {
   declare teamId: number;
   declare subarea: string;
   declare parameter: string;
-  declare sector: string;
+  declare code: string;
+  declare name: string;
   declare initialDate: Date;
   declare finalDate: Date;
   declare isActive: boolean;
@@ -37,7 +38,12 @@ PositionModel.init(
       type: sequelize.STRING,
       allowNull: true
     },
-    sector: {
+    code: {
+      type: sequelize.STRING,
+      unique: true,
+      allowNull: false
+    },
+    name: {
       type: sequelize.STRING,
       allowNull: true
     },
