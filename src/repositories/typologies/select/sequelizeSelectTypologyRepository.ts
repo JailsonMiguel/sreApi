@@ -1,17 +1,16 @@
 import { ITypologyProps } from '../../../interfaces/props/ITypologyProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { PositionModel } from '../../../models/positionModel';
-import { RegionalModel } from '../../../models/regionalModel';
-import { TypologyModel } from '../../../models/tipologyModel';
+import { TypologyModel } from '../../../models/typologyModel';
 import { ISelectTypologyRepository } from './ISelectTypologyInterface';
 
 export class SequelizeSelectTypologyRepository
   implements ISelectTypologyRepository
 {
-  async getAllActiveByRegional(regionalId: number) {
+  async getAllActiveByRegional(instituteId: number) {
     const allTypologies = await TypologyModel.findAll({
       where: {
-        regionalId: regionalId,
+        instituteId: instituteId,
         isActive: true
       }
     });
@@ -26,14 +25,8 @@ export class SequelizeSelectTypologyRepository
           as: 'position'
         },
         {
-          model: RegionalModel,
-          as: 'regional',
-          include: [
-            {
-              model: InstituteModel,
-              as: 'institute'
-            }
-          ]
+          model: InstituteModel,
+          as: 'institute'
         }
       ],
       order: [
@@ -49,7 +42,7 @@ export class SequelizeSelectTypologyRepository
   ): Promise<boolean> {
     const existsTypology = await TypologyModel.findOne({
       where: {
-        regionalId: typology.regionalId,
+        instituteId: typology.instituteId,
         positionId: typology.positionId,
         isActive: true
       }
@@ -61,12 +54,12 @@ export class SequelizeSelectTypologyRepository
     }
   }
   async getAllTypologyByRegionalAndPosition(
-    regionalId: number,
+    instituteId: number,
     positionId: number
   ): Promise<ITypologyProps[]> {
     const getAllTypologies = await TypologyModel.findAll({
       where: {
-        regionalId: regionalId,
+        instituteId: instituteId,
         positionId: positionId
       },
       order: [
@@ -77,15 +70,15 @@ export class SequelizeSelectTypologyRepository
     return getAllTypologies;
   }
   async getActiveByRegionalAndPosition(
-    regionalId: number,
+    instituteId: number,
     positionId: number
   ): Promise<ITypologyProps> {
     const getAllTypologies = await TypologyModel.findOne({
       where: {
-        regionalId: regionalId,
+        instituteId: instituteId,
         positionId: positionId,
         isActive: true
-      },
+      }
     });
     return getAllTypologies;
   }

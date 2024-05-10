@@ -8,11 +8,11 @@ export class CreateNewTypologyController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const { positionId, regionalId, authorized, legalSupport, isActive } =
+      const { positionId, instituteId, authorized, legalSupport, isActive } =
         req.body;
       await this.createNewTypologyUseCase.handle({
         positionId,
-        regionalId,
+        instituteId,
         authorized,
         legalSupport,
         isActive

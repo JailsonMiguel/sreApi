@@ -1,5 +1,5 @@
 import { ITypologyProps } from '../../../interfaces/props/ITypologyProps';
-import { TypologyModel } from '../../../models/tipologyModel';
+import { TypologyModel } from '../../../models/typologyModel';
 import { IInsertTypologyRepository } from './IInsertTypologyRepository';
 
 export class SequelizeInsertTypologyRepository

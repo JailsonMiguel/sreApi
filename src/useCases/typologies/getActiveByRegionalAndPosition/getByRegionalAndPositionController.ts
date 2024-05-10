@@ -11,9 +11,9 @@ export class GetActiveByRegionalAndPositionController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const regionalId: number = Number(req.params.regionalId);
+      const instituteId: number = Number(req.params.instituteId);
       const positionId: number = Number(req.params.positionId);
-      if (isNaN(regionalId)) {
+      if (isNaN(instituteId)) {
         return res.status(400).json({ message: 'Id da regional inválido' });
       }
       if (isNaN(positionId)) {
@@ -21,7 +21,7 @@ export class GetActiveByRegionalAndPositionController {
       }
       const listTypologies =
         await this.getActiveByRegionalAndPositionUseCase.handle(
-          regionalId,
+          instituteId,
           positionId
         );
       if (listTypologies) {

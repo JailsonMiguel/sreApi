@@ -6,10 +6,10 @@ export class GetByRegionalAndPositionUseCase {
     this.selectTypologyRepository = selectTypologyRepository;
   }
 
-  async handle(regionalId: number, positionId: number) {
+  async handle(instituteId: number, positionId: number) {
     const listTypologies =
       await this.selectTypologyRepository.getAllTypologyByRegionalAndPosition(
-        regionalId,
+        instituteId,
         positionId
       );
     console.log(listTypologies);

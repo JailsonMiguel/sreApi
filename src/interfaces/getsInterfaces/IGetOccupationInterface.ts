@@ -1,11 +1,11 @@
 import { IInstituteProps } from '../props/IInstituteProps';
+import { IOccupationProps } from '../props/IOccupationProps';
 import { IPositionProps } from '../props/IPositionProps';
-import { IRegionalProps } from '../props/IRegionalProps';
-import { ITypologyProps } from '../props/ITypologyProps';
+import { IServantProps } from '../props/IServantProps';
 
 type IGetTypologyInterface = {
-  tipology: ITypologyProps;
+  occupation: IOccupationProps;
+  servant: IServantProps;
   position: IPositionProps;
   institute: IInstituteProps;
-  regional: IRegionalProps;
 }[];

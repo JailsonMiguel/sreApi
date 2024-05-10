@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('typologies', {
+    await queryInterface.createTable('occupations', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -26,12 +26,32 @@ module.exports = {
           key: 'id'
         }
       },
-      authorized: {
+      servantId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'servants',
+          key: 'id'
+        }
+      },
+      functionEmail: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      loadWorkload: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      legalSupport: {
+      offcialAct: {
         type: Sequelize.STRING,
+        allowNull: true
+      },
+      initialDate: {
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      finalDate: {
+        type: Sequelize.DATE,
         allowNull: true
       },
       isActive: {
@@ -48,9 +68,16 @@ module.exports = {
         allowNull: false
       }
     });
+    /**
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     */
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('typologies');
+    await queryInterface.dropTable('occupations');
   }
 };
+

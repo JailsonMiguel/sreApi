@@ -5,13 +5,13 @@ export interface ISelectTypologyRepository {
     typology: ITypologyProps
   ): Promise<boolean>;
   getAllTypologies(): Promise<ITypologyProps[]>;
-  getAllActiveByRegional(regionalId: number): Promise<ITypologyProps[]>;
+  getAllActiveByRegional(instituteId: number): Promise<ITypologyProps[]>;
   getAllTypologyByRegionalAndPosition(
-    regionalId: number,
+    instituteId: number,
     positionId: number
   ): Promise<ITypologyProps[]>;
   getActiveByRegionalAndPosition(
-    regionalId: number,
+    instituteId: number,
     positionId: number
   ): Promise<ITypologyProps>;
 }

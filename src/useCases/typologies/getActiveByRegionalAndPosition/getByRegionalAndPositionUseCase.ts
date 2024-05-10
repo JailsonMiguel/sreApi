@@ -5,10 +5,10 @@ export class GetActiveByRegionalAndPositionUseCase {
   constructor(selectTypologyRepository: ISelectTypologyRepository) {
     this.selectTypologyRepository = selectTypologyRepository;
   }
-  async handle(regionalId: number, positionId: number) {
+  async handle(instituteId: number, positionId: number) {
     const listTypologiesActive =
       await this.selectTypologyRepository.getActiveByRegionalAndPosition(
-        regionalId,
+        instituteId,
         positionId
       );
     console.log(listTypologiesActive);

@@ -1,6 +1,6 @@
 export interface IUpdateTypologyInterface {
   positionId?: number;
-  regionalId?: number;
+  instituteId?: number;
   authorized?: number;
   isActive?: boolean;
 }

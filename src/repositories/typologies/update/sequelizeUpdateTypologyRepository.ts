@@ -1,5 +1,5 @@
 import { IUpdateTypologyInterface } from '../../../interfaces/updatesInterfaces/IUpdateTypologyInterface';
-import { TypologyModel } from '../../../models/tipologyModel';
+import { TypologyModel } from '../../../models/typologyModel';
 import { IUpdateTypologyRepository } from './IUpdateTypologyInterfaceRepository';
 
 export class SequelizeUpdateTypologyRepository
