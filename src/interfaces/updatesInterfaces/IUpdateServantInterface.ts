@@ -1,12 +1,7 @@
 export interface IUpdateServantInterface {
-  profileId?: number;
-  positionId?: number;
-  userId?: number;
-  regionalId?: number;
-  functionalEmail?: string;
-  loadWorkload?: string;
-  officialAct?: string;
-  initialDate?: Date;
-  finalDate?: Date;
+  name?: string;
+  email?: string;
+  dateBirth?: Date;
+  functionalNumber?: number;
   isActive?: boolean;
 }

@@ -8,26 +8,12 @@ export class CreateNewServantController {
   }
   handle = async (req: Request, res: Response) => {
     try {
-      const {
-        positionId,
-        regionalId,
-        userId,
-        functionalEmail,
-        loadWorkload,
-        officialAct,
-        initialDate,
-        finalDate,
-        isActive
-      } = req.body;
+      const { name, email, dateBirth, functionalNumber, isActive } = req.body;
       await this.createNewServantUseCase.handle({
-        positionId,
-        regionalId,
-        userId,
-        functionalEmail,
-        loadWorkload,
-        officialAct,
-        initialDate,
-        finalDate,
+        name,
+        email,
+        dateBirth,
+        functionalNumber,
         isActive
       });
       return res.status(201).json({

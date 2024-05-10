@@ -4,54 +4,25 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('servants', {
-      id: {
-        type: Sequelize.INTEGER,
+      cpf: {
+        type: Sequelize.STRING,
         primaryKey: true,
-        allowNull: false,
-        autoIncrement: true
+        allowNull: false
       },
-      positionId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'positions',
-          key: 'id'
-        }
-      },
-      userId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'users',
-          key: 'id'
-        }
-      },
-      regionalId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'regionals',
-          key: 'id'
-        }
-      },
-      functionalEmail: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      loadWorkload: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      officialAct: {
+      email: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
       },
-      initialDate: {
+      dateBirth: {
         type: Sequelize.DATE,
         allowNull: false
       },
-      finalDate: {
-        type: Sequelize.DATE,
+      functionalNumber: {
+        type: Sequelize.INTEGER,
         allowNull: true
       },
       isActive: {
@@ -74,4 +45,3 @@ module.exports = {
     await queryInterface.dropTable('servants');
   }
 };
-

@@ -1,72 +1,36 @@
 import db from '../database';
 import sequelize, { Model } from 'sequelize';
-import { UserModel } from './userModel';
-import { RegionalModel } from './regionalModel';
-import { PositionModel } from './positionModel';
 
 export class ServantModel extends Model {
-  declare id?: number;
-  declare positionId: number;
-  declare userId: number;
-  declare regionalId: number;
-  declare functionalEmail: string;
-  declare loadWorkload: string;
-  declare officialAct: string;
-  declare initialDate: Date;
-  declare finalDate: Date;
+  declare cpf?: string;
+  declare name: string;
+  declare email: string;
+  declare dateBirth: Date;
+  declare functionalNumber: number;
   declare isActive: boolean;
 }
 
 ServantModel.init(
   {
-    id: {
-      type: sequelize.INTEGER,
+    cpf: {
+      type: sequelize.STRING,
       primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
+      allowNull: false
     },
-    positionId: {
-      type: sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'positions',
-        key: 'id'
-      }
-    },
-    userId: {
-      type: sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'users',
-        key: 'id'
-      }
-    },
-    regionalId: {
-      type: sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'regionals',
-        key: 'id'
-      }
-    },
-    functionalEmail: {
-      type: sequelize.STRING,
-      allowNull: true
-    },
-    loadWorkload: {
+    name: {
       type: sequelize.STRING,
       allowNull: false
     },
-    officialAct: {
+    email: {
       type: sequelize.STRING,
-      allowNull: true
+      allowNull: false
     },
-    initialDate: {
+    dateBirth: {
       type: sequelize.DATE,
       allowNull: false
     },
-    finalDate: {
-      type: sequelize.DATE,
+    functionalNumber: {
+      type: sequelize.INTEGER,
       allowNull: true
     },
     isActive: {
@@ -88,33 +52,3 @@ ServantModel.init(
     tableName: 'servants'
   }
 );
-
-RegionalModel.hasOne(ServantModel, {
-  as: 'servant',
-  foreignKey: 'regionalId'
-});
-
-ServantModel.belongsTo(RegionalModel, {
-  as: 'regional',
-  foreignKey: 'regionalId'
-});
-
-UserModel.hasOne(ServantModel, {
-  as: 'servant',
-  foreignKey: 'userId'
-});
-
-ServantModel.belongsTo(UserModel, {
-  as: 'user',
-  foreignKey: 'userId'
-});
-
-PositionModel.hasOne(ServantModel, {
-  as: 'servant',
-  foreignKey: 'positionId'
-});
-
-ServantModel.belongsTo(PositionModel, {
-  as: 'position',
-  foreignKey: 'positionId'
-});

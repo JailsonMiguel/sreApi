@@ -5,7 +5,4 @@ import { IUserProps } from '../props/IUserProps';
 
 type IGetServantInterface = {
   servant: IServantProps;
-  position: IPositionProps;
-  user: IUserProps;
-  regional: IRegionalProps;
 }[];
