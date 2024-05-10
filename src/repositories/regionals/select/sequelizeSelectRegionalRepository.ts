@@ -1,9 +1,6 @@
 import { IRegionalProps } from '../../../interfaces/props/IRegionalProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { RegionalModel } from '../../../models/regionalModel';
-import { ServantModel } from '../../../models/servantModel';
-import { SuperintendentModel } from '../../../models/superintendentModel';
-import { UserModel } from '../../../models/userModel';
 import { ISelectRegionalRepository } from './ISelectRegionalInterface';
 
 export class SequelizeSelectRegionalRepository
@@ -15,22 +12,6 @@ export class SequelizeSelectRegionalRepository
         {
           model: InstituteModel,
           as: 'institute'
-        },
-        {
-          model: SuperintendentModel,
-          as: 'superintendent',
-          include: [
-            {
-              model: ServantModel,
-              as: 'servant',
-              include: [
-                {
-                  model: UserModel,
-                  as: 'user'
-                }
-              ]
-            }
-          ]
         }
       ]
     });

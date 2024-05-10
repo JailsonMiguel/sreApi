@@ -29,10 +29,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      urban: {
-        type: Sequelize.BOOLEAN,
-        allowNull: true
-      },
       isActive: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,

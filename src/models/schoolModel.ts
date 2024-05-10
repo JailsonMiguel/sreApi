@@ -8,7 +8,6 @@ export class SchoolModel extends Model {
   declare instituteId: number;
   declare regionalId: number;
   declare schoolInep: string;
-  declare urban: boolean;
   declare isActive: boolean;
 }
 
@@ -37,10 +36,6 @@ SchoolModel.init(
     },
     schoolInep: {
       type: sequelize.STRING,
-      allowNull: true
-    },
-    urban: {
-      type: sequelize.BOOLEAN,
       allowNull: true
     },
     isActive: {

@@ -17,14 +17,6 @@ module.exports = {
           key: 'id'
         }
       },
-      unitSgeCode: {
-        type: Sequelize.BIGINT,
-        allowNull: true
-      },
-      network: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-      },
       isActive: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,

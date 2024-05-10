@@ -3,6 +3,5 @@ export interface ISchoolProps {
   instituteId: number;
   regionalId: number;
   schoolInep: string;
-  urban: boolean;
   isActive: boolean;
 }
