@@ -42,11 +42,11 @@ OccupationModel.init(
       }
     },
     servantId: {
-      type: sequelize.INTEGER,
+      type: sequelize.STRING,
       allowNull: false,
       references: {
         model: 'servants',
-        key: 'id'
+        key: 'cpf'
       }
     },
     functionEmail: {

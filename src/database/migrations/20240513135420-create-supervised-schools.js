@@ -3,18 +3,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('occupations', {
+    await queryInterface.createTable('supervisedSchools', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
-      positionId: {
+      occupationId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'positions',
+          model: 'occupations',
           key: 'id'
         }
       },
@@ -25,26 +25,6 @@ module.exports = {
           model: 'institutes',
           key: 'id'
         }
-      },
-      servantId: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        references: {
-          model: 'servants',
-          key: 'cpf'
-        }
-      },
-      functionEmail: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
-      loadWorkload: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      offcialAct: {
-        type: Sequelize.STRING,
-        allowNull: true
       },
       initialDate: {
         type: Sequelize.DATE,
@@ -71,7 +51,7 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('occupations');
+    await queryInterface.dropTable('supervisedSchools');
   }
 };
 
