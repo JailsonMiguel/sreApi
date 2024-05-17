@@ -10,11 +10,11 @@ typologyRouter.post('/typology', createNewTypologyController.handle);
 typologyRouter.get('/typology', getAllTypologiesController.handle);
 typologyRouter.put('/typology/:typologyId', updateTypologyController.handle);
 typologyRouter.get(
-  '/typology/:regionalId/:positionId',
+  '/typology/:instituteId/:positionId',
   getAllTByRegionalAndPositionController.handle
 );
 typologyRouter.get(
-  '/typology/:regionalId/:positionId/:isActive',
+  '/typology/:instituteId/:positionId/:isActive',
   getActiveByRegionalAndPositionController.handle
 );
 

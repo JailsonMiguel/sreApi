@@ -1,6 +1,7 @@
 import { ITypologyProps } from '../../../interfaces/props/ITypologyProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { PositionModel } from '../../../models/positionModel';
+import { RegionalModel } from '../../../models/regionalModel';
 import { TypologyModel } from '../../../models/typologyModel';
 import { ISelectTypologyRepository } from './ISelectTypologyInterface';
 
@@ -26,7 +27,13 @@ export class SequelizeSelectTypologyRepository
         },
         {
           model: InstituteModel,
-          as: 'institute'
+          as: 'institute',
+          include: [
+            {
+              model: RegionalModel,
+              as: 'regional'
+            }
+          ]
         }
       ],
       order: [
@@ -62,6 +69,22 @@ export class SequelizeSelectTypologyRepository
         instituteId: instituteId,
         positionId: positionId
       },
+      include: [
+        {
+          model: PositionModel,
+          as: 'position'
+        },
+        {
+          model: InstituteModel,
+          as: 'institute',
+          include: [
+            {
+              model: RegionalModel,
+              as: 'regional'
+            }
+          ]
+        }
+      ],
       order: [
         ['isActive', 'DESC'],
         ['id', 'DESC']
