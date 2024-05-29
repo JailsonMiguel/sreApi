@@ -7,6 +7,7 @@ import { servantRouter } from './servant';
 import { regionalRouter } from './regional';
 import { consultantRouter } from './consultant';
 import { teamRouter } from './team';
+import { occupationRouter } from './occupation';
 
 const appRouter = Router();
 
@@ -18,5 +19,6 @@ appRouter.use(typologyRouter);
 appRouter.use(servantRouter);
 appRouter.use(consultantRouter);
 appRouter.use(teamRouter);
+appRouter.use(occupationRouter);
 
 export { appRouter };

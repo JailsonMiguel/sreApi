@@ -1,3 +1,4 @@
+import { where } from 'sequelize';
 import { IOccupationProps } from '../../../interfaces/props/IOccupationProps';
 import { InstituteModel } from '../../../models/instituteModel';
 import { OccupationModel } from '../../../models/occupationModel';
@@ -13,7 +14,11 @@ export class SequelizeSelectOccupationRepository
       where: {
         instituteId: instituteId,
         isActive: true
-      }
+      },
+      order: [
+        ['isActive', 'DESC'],
+        ['id', 'DESC']
+      ]
     });
     return allOccupation;
   }
@@ -83,8 +88,40 @@ export class SequelizeSelectOccupationRepository
         instituteId: instituteId,
         positionId: positionId,
         isActive: true
-      }
+      },
+      order: [
+        ['isActive', 'DESC'],
+        ['id', 'DESC']
+      ]
     });
     return getAllOccupation;
+  }
+  async getAllOccupationByPosition(
+    positionId: number
+  ): Promise<IOccupationProps[]> {
+    const getAllOccupations = await OccupationModel.findAll({
+      where: {
+        positionId: positionId
+      },
+      include: [
+        {
+          model: PositionModel,
+          as: 'position'
+        },
+        {
+          model: InstituteModel,
+          as: 'institute'
+        },
+        {
+          model: ServantModel,
+          as: 'servant'
+        }
+      ],
+      order: [
+        ['isActive', 'DESC'],
+        ['id', 'DESC']
+      ]
+    });
+    return getAllOccupations;
   }
 }

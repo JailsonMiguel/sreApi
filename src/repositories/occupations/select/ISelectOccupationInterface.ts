@@ -14,4 +14,5 @@ export interface ISelectOccupationRepository {
     instituteId: number,
     positionId: number
   ): Promise<IOccupationProps>;
+  getAllOccupationByPosition(positionId: number): Promise<IOccupationProps[]>;
 }
