@@ -2,6 +2,7 @@ import { Model } from 'sequelize';
 import { IServantProps } from '../../../interfaces/props/IServantProps';
 import { ServantModel } from '../../../models/servantModel';
 import { ISelectServantRepository } from './ISelectServantInterface';
+import { Servant } from '../../../entities/servant';
 
 export class SequelizeSelectServantRepository
   implements ISelectServantRepository
@@ -31,5 +32,13 @@ export class SequelizeSelectServantRepository
     } else {
       return false;
     }
+  }
+  async getServantByCpf(cpf: string): Promise<IServantProps> {
+    const servantFound = await ServantModel.findOne({
+      where: {
+        cpf: cpf
+      }
+    });
+    return servantFound;
   }
 }

@@ -72,6 +72,20 @@ export class SequelizeSelectOccupationRepository
         instituteId: instituteId,
         positionId: positionId
       },
+      include: [
+        {
+          model: PositionModel,
+          as: 'position'
+        },
+        {
+          model: InstituteModel,
+          as: 'institute'
+        },
+        {
+          model: ServantModel,
+          as: 'servant'
+        }
+      ],
       order: [
         ['isActive', 'DESC'],
         ['id', 'DESC']
@@ -89,6 +103,20 @@ export class SequelizeSelectOccupationRepository
         positionId: positionId,
         isActive: true
       },
+      include: [
+        {
+          model: PositionModel,
+          as: 'position'
+        },
+        {
+          model: InstituteModel,
+          as: 'institute'
+        },
+        {
+          model: ServantModel,
+          as: 'servant'
+        }
+      ],
       order: [
         ['isActive', 'DESC'],
         ['id', 'DESC']
