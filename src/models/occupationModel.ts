@@ -8,7 +8,7 @@ export class OccupationModel extends Model {
   declare id?: number;
   declare positionId: number;
   declare instituteId: number;
-  declare servantId: number;
+  declare servantId: string;
   declare functionEmail: string;
   declare loadWorkload: number;
   declare offcialAct: string;

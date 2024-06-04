@@ -1,7 +1,7 @@
 export interface IUpdateOccupationInterface {
   positionId?: number;
   instituteId?: number;
-  servantId?: number;
+  servantId?: string;
   functionEmail?: string;
   loadWorkload?: number;
   offcialAct?: string;

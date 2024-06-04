@@ -2,7 +2,7 @@ export interface IOccupationProps {
   id?: number;
   positionId: number;
   instituteId: number;
-  servantId: number;
+  servantId: string;
   functionEmail: string;
   loadWorkload: number;
   offcialAct: string;
