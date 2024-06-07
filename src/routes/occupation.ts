@@ -2,10 +2,11 @@ import { Router } from 'express';
 import { getAllSuperintendentsController } from '../useCases/occupations/getAllSuperintendentActive';
 import { getSuperintendentByInstituteController } from '../useCases/occupations/getAllSuperintendentsByIntituteUseCase';
 import { updateOccupationController } from '../useCases/occupations/updateOccupation';
+import { createNewOccupationController } from '../useCases/occupations/createNewOccupation';
 
 const occupationRouter = Router();
-// occupationRouter.post('/occupation', createNewTeamController.handle);
-// occupationRouter.get('/occupation', getAllTeamsController.handle);
+occupationRouter.post('/occupation', createNewOccupationController.handle);
+// occupationRouter.get('/occupation', getAllOccupationsController.handle);
 occupationRouter.put(
   '/occupation/:occupationId',
   updateOccupationController.handle

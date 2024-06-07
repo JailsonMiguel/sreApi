@@ -8,9 +8,9 @@ export class SequelizeSelectPositionRepository
   async getAllPositions(): Promise<IPositionProps[]> {
     const allPositions = await PositionModel.findAll({
       order: [
-        ['isActive','DESC'],
-        ['teamId','ASC'],
-        ['subarea','ASC']
+        ['isActive', 'DESC'],
+        ['teamId', 'ASC'],
+        ['subarea', 'ASC']
       ]
     });
     return allPositions;
@@ -57,5 +57,17 @@ export class SequelizeSelectPositionRepository
       ]
     });
     return allPositions;
+  }
+  async getPositionByCode(code: string): Promise<number | null> {
+    const positionId = await PositionModel.findOne({
+      where: {
+        code: code
+      }
+    });
+    if (positionId) {
+      return positionId.id;
+    } else {
+      return null;
+    }
   }
 }

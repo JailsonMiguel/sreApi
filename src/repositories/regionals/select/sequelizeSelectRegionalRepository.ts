@@ -14,7 +14,27 @@ export class SequelizeSelectRegionalRepository
       include: [
         {
           model: InstituteModel,
-          as: 'institute'
+          as: 'institute',
+          include: [
+            {
+              required: false,
+              model: OccupationModel,
+              as: 'occupation',
+              where: {
+                isActive: true
+              },
+              include: [
+                {
+                  model: ServantModel,
+                  as: 'servant'
+                },
+                {
+                  model: PositionModel,
+                  as: 'position'
+                }
+              ]
+            }
+          ]          
         }
       ]
     });
