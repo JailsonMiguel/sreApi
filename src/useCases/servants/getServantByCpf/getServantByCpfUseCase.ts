@@ -1,4 +1,4 @@
-import { ISelectServantRepository } from '../../../repositories/servants/select/ISelectServantInterface';
+import { ISelectServantRepository } from '../../../interfaces/repositories/select/ISelectServantInterface';
 
 export class GetServantByCpfUseCase {
   private selectServantRepository: ISelectServantRepository;

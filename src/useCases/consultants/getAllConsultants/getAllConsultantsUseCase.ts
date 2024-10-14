@@ -1,4 +1,4 @@
-import { ISelectConsultantRepository } from '../../../repositories/consultants/select/ISelectConsultantInterface';
+import { ISelectConsultantRepository } from '../../../interfaces/repositories/select/ISelectConsultantInterface';
 
 export class GetAllConsultantsUseCase {
   private selectConsultantRepository: ISelectConsultantRepository;

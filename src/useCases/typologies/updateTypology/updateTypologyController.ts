@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateTypologyUseCase } from './updateTypologyUseCase';
-import { IUpdateTypologyInterface } from '../../../interfaces/updatesInterfaces/IUpdateTypologyInterface';
+import { IUpdateTypologyInterface } from '../../../interfaces/updates/IUpdateTypologyInterface';
 
 export class UpdateTypologyController {
   constructor(private updateTypologyUseCase: UpdateTypologyUseCase) {}

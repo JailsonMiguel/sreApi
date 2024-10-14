@@ -1,5 +1,5 @@
-import { IUpdateTeamInterface } from '../../../interfaces/updatesInterfaces/IUpdateTeamInterface';
-import { IUpdateTeamRepository } from '../../../repositories/teams/update/IUpdateTeamInterfaceRepository';
+import { IUpdateTeamRepository } from '../../../interfaces/repositories/update/IUpdateTeamInterfaceRepository';
+import { IUpdateTeamInterface } from '../../../interfaces/updates/IUpdateTeamInterface';
 
 export class UpdateTeamUseCase {
   constructor(private updateTeamRepository: IUpdateTeamRepository) {}

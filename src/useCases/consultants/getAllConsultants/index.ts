@@ -1,4 +1,4 @@
-import { SequelizeSelectConsultantRepository } from '../../../repositories/consultants/select/sequelizeSelectConsultantRepository';
+import { SequelizeSelectConsultantRepository } from '../../../repositories/select/sequelizeSelectConsultantRepository';
 import { GetAllConsultantsController } from './getAllConsultantsController';
 import { GetAllConsultantsUseCase } from './getAllConsultantsUseCase';
 

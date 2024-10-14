@@ -1,4 +1,4 @@
-import { SequelizeUpdateOccupationRepository } from '../../../repositories/occupations/update/sequelizeUpdateOccupationRepository';
+import { SequelizeUpdateOccupationRepository } from '../../../repositories/update/sequelizeUpdateOccupationRepository';
 import { UpdateOccupationController } from './updateOccupationController';
 import { UpdateOccupationUseCase } from './updateOccupationUseCase';
 

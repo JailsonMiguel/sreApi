@@ -1,6 +1,6 @@
 import { IConsultantProps } from '../../../interfaces/props/IConsultantProps';
-import { IInsertConsultantRepository } from '../../../repositories/consultants/insert/IInsertConsultantRepository';
-import { ISelectConsultantRepository } from '../../../repositories/consultants/select/ISelectConsultantInterface';
+import { IInsertConsultantRepository } from '../../../interfaces/repositories/create/IInsertConsultantRepository';
+import { ISelectConsultantRepository } from '../../../interfaces/repositories/select/ISelectConsultantInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewConsultantUseCase {

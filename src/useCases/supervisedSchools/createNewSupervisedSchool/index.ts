@@ -1,5 +1,5 @@
-import { SequelizeInsertSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/create/sequelizeInsertSupervisedSchoolRepository';
-import { SequelizeSelectSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/select/sequelizeSelectSupervisedSchoolsRepository';
+import { SequelizeInsertSupervisedSchoolRepository } from '../../../repositories/create/sequelizeInsertSupervisedSchoolRepository';
+import { SequelizeSelectSupervisedSchoolRepository } from '../../../repositories/select/sequelizeSelectSupervisedSchoolsRepository';
 import { CreateNewSupervisedSchoolController } from './createNewSupervisedSchoolController';
 import { CreateNewSupervisedSchoolUseCase } from './createNewSupervisedSchoolUseCase';
 

@@ -1,4 +1,4 @@
-import { ISelectSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/select/ISelectSupervisedSchoolsInterface';
+import { ISelectSupervisedSchoolRepository } from '../../../interfaces/repositories/select/ISelectSupervisedSchoolsInterface';
 
 export class GetAllSupervisedSchoolsUseCase {
   private selectSupervisedSchoolRepository: ISelectSupervisedSchoolRepository;

@@ -1,6 +1,6 @@
 import { IServantProps } from '../../../interfaces/props/IServantProps';
-import { IInsertServantRepository } from '../../../repositories/servants/insert/IInsertServantRepository';
-import { ISelectServantRepository } from '../../../repositories/servants/select/ISelectServantInterface';
+import { IInsertServantRepository } from '../../../interfaces/repositories/create/IInsertServantRepository';
+import { ISelectServantRepository } from '../../../interfaces/repositories/select/ISelectServantInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewServantUseCase {

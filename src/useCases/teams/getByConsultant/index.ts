@@ -1,4 +1,4 @@
-import { SequelizeSelectTeamRepository } from "../../../repositories/teams/select/sequelizeSelectTeamRepository";
+import { SequelizeSelectTeamRepository } from "../../../repositories/select/sequelizeSelectTeamRepository";
 import { GetAllTeamsByConsultantIdController } from "./getByConsultantController";
 import { GetByConsultanIdUseCase } from "./getByConsultantUseCase";
 

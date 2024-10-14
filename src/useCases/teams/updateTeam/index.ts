@@ -1,4 +1,4 @@
-import { SequelizeUpdateTeamRepository } from '../../../repositories/teams/update/sequelizeUpdateTeamRepository';
+import { SequelizeUpdateTeamRepository } from '../../../repositories/update/sequelizeUpdateTeamRepository';
 import { UpdateTeamController } from './updateTeamController';
 import { UpdateTeamUseCase } from './updateTeamUseCase';
 

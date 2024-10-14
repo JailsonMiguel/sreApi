@@ -1,4 +1,4 @@
-import { SequelizeUpdatePositionRepository } from '../../../repositories/positions/update/sequelizeUpdatePositionRepository';
+import { SequelizeUpdatePositionRepository } from '../../../repositories/update/sequelizeUpdatePositionRepository';
 import { UpdatePositionController } from './updatePositionController';
 import { UpdatePositionUseCase } from './updatePositionUseCase';
 

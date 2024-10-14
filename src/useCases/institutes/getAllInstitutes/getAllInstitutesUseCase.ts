@@ -1,4 +1,4 @@
-import { ISelectInstituteRepository } from '../../../repositories/institutes/select/ISelectInstituteInterface';
+import { ISelectInstituteRepository } from "../../../interfaces/repositories/select/ISelectInstituteInterface";
 
 export class GetAllInstitutesUseCase {
   private selectInstituteRepository: ISelectInstituteRepository;

@@ -1,5 +1,5 @@
-import { IUpdateRegionalInterface } from '../../../interfaces/updatesInterfaces/IUpdateRegionalInterface';
-import { IUpdateRegionalRepository } from '../../../repositories/regionals/update/IUpdateRegionalInterfaceRepository';
+import { IUpdateRegionalRepository } from '../../../interfaces/repositories/update/IUpdateRegionalInterfaceRepository';
+import { IUpdateRegionalInterface } from '../../../interfaces/updates/IUpdateRegionalInterface';
 
 export class UpdateRegionalUseCase {
   constructor(private updateRegionalRepository: IUpdateRegionalRepository) {}

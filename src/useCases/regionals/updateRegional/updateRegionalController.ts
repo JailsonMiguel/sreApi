@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateRegionalUseCase } from './updateRegionalUseCase';
-import { IUpdateRegionalInterface } from '../../../interfaces/updatesInterfaces/IUpdateRegionalInterface';
+import { IUpdateRegionalInterface } from '../../../interfaces/updates/IUpdateRegionalInterface';
 
 export class UpdateRegionalController {
   constructor(private updateRegionalUseCase: UpdateRegionalUseCase) {}

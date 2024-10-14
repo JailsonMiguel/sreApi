@@ -1,5 +1,5 @@
-import { SequelizeInsertTeamRepository } from '../../../repositories/teams/insert/sequelizeInsertTeamRepository';
-import { SequelizeSelectTeamRepository } from '../../../repositories/teams/select/sequelizeSelectTeamRepository';
+import { SequelizeInsertTeamRepository } from '../../../repositories/create/sequelizeInsertTeamRepository';
+import { SequelizeSelectTeamRepository } from '../../../repositories/select/sequelizeSelectTeamRepository';
 import { CreateNewTeamController } from './createNewTeamController';
 import { CreateNewTeamUseCase } from './createNewTeamUseCase';
 

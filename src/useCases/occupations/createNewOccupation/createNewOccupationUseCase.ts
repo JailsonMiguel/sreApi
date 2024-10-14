@@ -1,6 +1,6 @@
 import { IOccupationProps } from '../../../interfaces/props/IOccupationProps';
-import { IInsertOccupationRepository } from '../../../repositories/occupations/insert/IInsertOccupationRepository';
-import { ISelectOccupationRepository } from '../../../repositories/occupations/select/ISelectOccupationInterface';
+import { IInsertOccupationRepository } from '../../../interfaces/repositories/create/IInsertOccupationRepository';
+import { ISelectOccupationRepository } from '../../../interfaces/repositories/select/ISelectOccupationInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewOccupationUseCase {

@@ -1,4 +1,4 @@
-import { SequelizeUpdateTypologyRepository } from '../../../repositories/typologies/update/sequelizeUpdateTypologyRepository';
+import { SequelizeUpdateTypologyRepository } from '../../../repositories/update/sequelizeUpdateTypologyRepository';
 import { UpdateTypologyUseCase } from './updateTypologyUseCase';
 import { UpdateTypologyController } from './updateTypologyController';
 

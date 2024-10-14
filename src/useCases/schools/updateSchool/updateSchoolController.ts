@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateSchoolUseCase } from './updateSchoolUseCase';
-import { IUpdateSchoolInterface } from '../../../interfaces/updatesInterfaces/IUpdateSchoolInterface';
+import { IUpdateSchoolInterface } from '../../../interfaces/updates/IUpdateSchoolInterface';
 
 export class UpdateSchoolController {
   constructor(private updateSchoolUseCase: UpdateSchoolUseCase) {}

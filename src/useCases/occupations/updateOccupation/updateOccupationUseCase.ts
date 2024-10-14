@@ -1,5 +1,5 @@
-import { IUpdateOccupationInterface } from '../../../interfaces/updatesInterfaces/IUpdateOccupationInterface';
-import { IUpdateOccupationRepository } from '../../../repositories/occupations/update/IUpdateOccupationInterfaceRepository';
+import { IUpdateOccupationInterface } from '../../../interfaces/updates/IUpdateOccupationInterface';
+import { IUpdateOccupationRepository } from '../../../interfaces/repositories/update/IUpdateOccupationInterfaceRepository';
 
 export class UpdateOccupationUseCase {
   constructor(

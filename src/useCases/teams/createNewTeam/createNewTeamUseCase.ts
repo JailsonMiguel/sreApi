@@ -1,6 +1,6 @@
 import { ITeamProps } from '../../../interfaces/props/ITeamProps';
-import { IInsertTeamRepository } from '../../../repositories/teams/insert/IInsertTeamRepository';
-import { ISelectTeamRepository } from '../../../repositories/teams/select/ISelectTeamInterface';
+import { IInsertTeamRepository } from '../../../interfaces/repositories/create/IInsertTeamRepository';
+import { ISelectTeamRepository } from '../../../interfaces/repositories/select/ISelectTeamInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewTeamUseCase {

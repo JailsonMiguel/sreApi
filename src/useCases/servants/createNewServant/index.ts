@@ -1,5 +1,5 @@
-import { SequelizeInsertServantRepository } from '../../../repositories/servants/insert/sequelizeInsertServantRepository';
-import { SequelizeSelectServantRepository } from '../../../repositories/servants/select/sequelizeSelectServantRepository';
+import { SequelizeInsertServantRepository } from '../../../repositories/create/sequelizeInsertServantRepository';
+import { SequelizeSelectServantRepository } from '../../../repositories/select/sequelizeSelectServantRepository';
 import { CreateNewServantController } from './createNewServantController';
 import { CreateNewServantUseCase } from './createNewServantUseCase';
 

@@ -1,4 +1,4 @@
-import { SequelizeSelectServantRepository } from '../../../repositories/servants/select/sequelizeSelectServantRepository';
+import { SequelizeSelectServantRepository } from '../../../repositories/select/sequelizeSelectServantRepository';
 import { GetAllServantsController } from './getAllServantsController';
 import { GetAllServantsUseCase } from './getAllServantsUseCase';
 

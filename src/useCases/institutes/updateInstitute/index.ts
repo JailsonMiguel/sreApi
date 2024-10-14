@@ -1,4 +1,4 @@
-import { SequelizeUpdateInstituteRepository } from '../../../repositories/institutes/update/sequelizeUpdateInstituteRepository';
+import { SequelizeUpdateInstituteRepository } from '../../../repositories/update/sequelizeUpdateInstituteRepository';
 import { UpdateInstituteController } from './updateInstituteController';
 import { UpdateInstituteUseCase } from './updateInstituteUseCase';
 

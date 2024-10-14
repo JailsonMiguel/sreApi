@@ -1,4 +1,4 @@
-import { SequelizeSelectTypologyRepository } from '../../../repositories/typologies/select/sequelizeSelectTypologyRepository';
+import { SequelizeSelectTypologyRepository } from '../../../repositories/select/sequelizeSelectTypologyRepository';
 import { GetActiveByRegionalAndPositionController } from './getByRegionalAndPositionController';
 import { GetActiveByRegionalAndPositionUseCase } from './getByRegionalAndPositionUseCase';
 

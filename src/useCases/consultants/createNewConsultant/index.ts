@@ -1,5 +1,5 @@
-import { SequelizeInsertConsultantRepository } from '../../../repositories/consultants/insert/sequelizeInsertConsultantRepository';
-import { SequelizeSelectConsultantRepository } from '../../../repositories/consultants/select/sequelizeSelectConsultantRepository';
+import { SequelizeInsertConsultantRepository } from '../../../repositories/create/sequelizeInsertConsultantRepository';
+import { SequelizeSelectConsultantRepository } from '../../../repositories/select/sequelizeSelectConsultantRepository';
 import { CreateNewConsultantController } from './createNewConsultantController';
 import { CreateNewConsultantUseCase } from './createNewConsultantUseCase';
 

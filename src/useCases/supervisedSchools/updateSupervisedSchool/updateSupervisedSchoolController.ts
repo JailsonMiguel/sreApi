@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateSupervisedSchoolUseCase } from './updateSupervisedSchoolUseCase';
-import { IUpdateSupervisedSchoolInterface } from '../../../interfaces/updatesInterfaces/IUpdateSupervisedSchoolInterface';
+import { IUpdateSupervisedSchoolInterface } from '../../../interfaces/updates/IUpdateSupervisedSchoolInterface';
 
 export class UpdateSupervisedSchoolController {
   constructor(

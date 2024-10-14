@@ -1,6 +1,6 @@
 import { ITypologyProps } from '../../../interfaces/props/ITypologyProps';
-import { IInsertTypologyRepository } from '../../../repositories/typologies/insert/IInsertTypologyRepository';
-import { ISelectTypologyRepository } from '../../../repositories/typologies/select/ISelectTypologyInterface';
+import { IInsertTypologyRepository } from '../../../interfaces/repositories/create/IInsertTypologyRepository';
+import { ISelectTypologyRepository } from '../../../interfaces/repositories/select/ISelectTypologyInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewTypologyUseCase {

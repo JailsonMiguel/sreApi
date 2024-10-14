@@ -1,4 +1,4 @@
-import { SequelizeSelectOccupationRepository } from "../../../repositories/occupations/select/sequelizeSelectOccupationRepository";
+import { SequelizeSelectOccupationRepository } from "../../../repositories/select/sequelizeSelectOccupationRepository";
 import { GetSuperintendentByInstituteController } from "./getSuperintendentsByInstituteController";
 import { GetSuperintendentByInstituteUseCase } from "./getSuperintendentsByInstituteUseCase";
 

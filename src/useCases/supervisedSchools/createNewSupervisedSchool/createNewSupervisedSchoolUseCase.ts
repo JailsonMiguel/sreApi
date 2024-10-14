@@ -1,6 +1,6 @@
 import { ISupervisedSchoolProps } from '../../../interfaces/props/ISupervisedSchoolProps';
-import { IInsertSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/create/IInsertSupervisedSchoolRepository';
-import { ISelectSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/select/ISelectSupervisedSchoolsInterface';
+import { IInsertSupervisedSchoolRepository } from '../../../interfaces/repositories/create/IInsertSupervisedSchoolRepository';
+import { ISelectSupervisedSchoolRepository } from '../../../interfaces/repositories/select/ISelectSupervisedSchoolsInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewSupervisedSchoolUseCase {

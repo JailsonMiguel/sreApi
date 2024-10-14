@@ -1,4 +1,4 @@
-import { SequelizeUpdateRegionalRepository } from '../../../repositories/regionals/update/sequelizeUpdateRegionalRepository';
+import { SequelizeUpdateRegionalRepository } from '../../../repositories/update/sequelizeUpdateRegionalRepository';
 import { UpdateRegionalController } from './updateRegionalController';
 import { UpdateRegionalUseCase } from './updateRegionalUseCase';
 

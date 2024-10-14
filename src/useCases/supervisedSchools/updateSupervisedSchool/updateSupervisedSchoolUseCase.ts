@@ -1,5 +1,5 @@
-import { IUpdateSupervisedSchoolInterface } from '../../../interfaces/updatesInterfaces/IUpdateSupervisedSchoolInterface';
-import { IUpdateSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/update/IUpdateSupervisedSchoolInterfaceRepository';
+import { IUpdateSupervisedSchoolRepository } from '../../../interfaces/repositories/update/IUpdateSupervisedSchoolInterfaceRepository';
+import { IUpdateSupervisedSchoolInterface } from '../../../interfaces/updates/IUpdateSupervisedSchoolInterface';
 
 export class UpdateSupervisedSchoolUseCase {
   constructor(

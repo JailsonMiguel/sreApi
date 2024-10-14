@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdatePositionUseCase } from './updatePositionUseCase';
-import { IUpdatePositionInterface } from '../../../interfaces/updatesInterfaces/IUpdatePositionInterface';
+import { IUpdatePositionInterface } from '../../../interfaces/updates/IUpdatePositionInterface';
 
 export class UpdatePositionController {
   constructor(private updatePositionUseCase: UpdatePositionUseCase) {}

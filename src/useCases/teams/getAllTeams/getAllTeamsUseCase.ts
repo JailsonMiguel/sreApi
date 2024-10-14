@@ -1,4 +1,4 @@
-import { ISelectTeamRepository } from '../../../repositories/teams/select/ISelectTeamInterface';
+import { ISelectTeamRepository } from '../../../interfaces/repositories/select/ISelectTeamInterface';
 
 export class GetAllTeamsUseCase {
   private selectTeamRepository: ISelectTeamRepository;

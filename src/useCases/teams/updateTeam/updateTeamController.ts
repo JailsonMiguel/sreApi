@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateTeamUseCase } from './updateTeamUseCase';
-import { IUpdateTeamInterface } from '../../../interfaces/updatesInterfaces/IUpdateTeamInterface';
+import { IUpdateTeamInterface } from '../../../interfaces/updates/IUpdateTeamInterface';
 
 export class UpdateTeamController {
   constructor(private updateTeamUseCase: UpdateTeamUseCase) {}

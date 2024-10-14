@@ -1,4 +1,4 @@
-import { ISelectTypologyRepository } from '../../../repositories/typologies/select/ISelectTypologyInterface';
+import { ISelectTypologyRepository } from "../../../interfaces/repositories/select/ISelectTypologyInterface";
 
 export class GetActiveByRegionalAndPositionUseCase {
   private selectTypologyRepository: ISelectTypologyRepository;

@@ -1,4 +1,4 @@
-import { SequelizeUpdateConsultantRepository } from '../../../repositories/consultants/update/sequelizeUpdateConsultantRepository';
+import { SequelizeUpdateConsultantRepository } from '../../../repositories/update/sequelizeUpdateConsultantRepository';
 import { UpdateConsultantController } from './updateConsultantController';
 import { UpdateConsultantUseCase } from './updateConsultantUseCase';
 

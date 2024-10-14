@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateServantUseCase } from './updateServantUseCase';
-import { IUpdateServantInterface } from '../../../interfaces/updatesInterfaces/IUpdateServantInterface';
+import { IUpdateServantInterface } from '../../../interfaces/updates/IUpdateServantInterface';
 
 export class UpdateServantController {
   constructor(private updateServantUseCase: UpdateServantUseCase) {}

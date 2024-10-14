@@ -1,4 +1,4 @@
-import { ISelectPositionRepository } from '../../../repositories/positions/select/ISelectPositionInterface';
+import { ISelectPositionRepository } from "../../../interfaces/repositories/select/ISelectPositionInterface";
 
 export class GetByCodeUseCase {
   private selectPositionRepository: ISelectPositionRepository;

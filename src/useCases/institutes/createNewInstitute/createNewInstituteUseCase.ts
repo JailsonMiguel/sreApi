@@ -1,6 +1,6 @@
 import { IInstituteProps } from '../../../interfaces/props/IInstituteProps';
-import { IInsertInstituteRepository } from '../../../repositories/institutes/insert/IInsertInstituteRepository';
-import { ISelectInstituteRepository } from '../../../repositories/institutes/select/ISelectInstituteInterface';
+import { IInsertInstituteRepository } from '../../../interfaces/repositories/create/IInsertInstituteRepository';
+import { ISelectInstituteRepository } from '../../../interfaces/repositories/select/ISelectInstituteInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewInstituteUseCase {

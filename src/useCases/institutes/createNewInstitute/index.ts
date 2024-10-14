@@ -1,5 +1,5 @@
-import { SequelizeInsertInstituteRepository } from '../../../repositories/institutes/insert/sequelizeInsertInstituteRepository';
-import { SequelizeSelectInstituteRepository } from '../../../repositories/institutes/select/sequelizeSelectInstituteRepository';
+import { SequelizeInsertInstituteRepository } from '../../../repositories/create/sequelizeInsertInstituteRepository';
+import { SequelizeSelectInstituteRepository } from '../../../repositories/select/sequelizeSelectInstituteRepository';
 import { CreateNewInstituteController } from './createNewInstituteController';
 import { CreateNewInstituteUseCase } from './createNewInstituteUseCase';
 

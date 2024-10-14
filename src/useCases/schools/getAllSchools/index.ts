@@ -1,4 +1,4 @@
-import { SequelizeSelectSchoolRepository } from '../../../repositories/schools/select/sequelizeSelectSchoolRepository';
+import { SequelizeSelectSchoolRepository } from '../../../repositories/select/sequelizeSelectSchoolRepository';
 import { GetAllSchoolsController } from './getAllSchoolsController';
 import { GetAllSchoolsUseCase } from './getAllSchoolsUseCase';
 

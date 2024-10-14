@@ -1,4 +1,4 @@
-import { SequelizeSelectInstituteRepository } from '../../../repositories/institutes/select/sequelizeSelectInstituteRepository';
+import { SequelizeSelectInstituteRepository } from '../../../repositories/select/sequelizeSelectInstituteRepository';
 import { GetAllInstitutesController } from './getAllInstitutesController';
 import { GetAllInstitutesUseCase } from './getAllInstitutesUseCase';
 

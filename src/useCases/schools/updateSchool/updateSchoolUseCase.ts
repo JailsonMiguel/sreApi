@@ -1,5 +1,5 @@
-import { IUpdateSchoolInterface } from '../../../interfaces/updatesInterfaces/IUpdateSchoolInterface';
-import { IUpdateSchoolRepository } from '../../../repositories/schools/update/IUpdateSchoolInterfaceRepository';
+import { IUpdateSchoolRepository } from '../../../interfaces/repositories/update/IUpdateSchoolInterfaceRepository';
+import { IUpdateSchoolInterface } from '../../../interfaces/updates/IUpdateSchoolInterface';
 
 export class UpdateSchoolUseCase {
   constructor(private updateSchoolRepository: IUpdateSchoolRepository) {}

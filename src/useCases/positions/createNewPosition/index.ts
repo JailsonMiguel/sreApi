@@ -1,5 +1,5 @@
-import { SequelizeInsertPositionRepository } from '../../../repositories/positions/insert/sequelizeInsertPositionRepository';
-import { SequelizeSelectPositionRepository } from '../../../repositories/positions/select/sequelizeSelectPositionRepository';
+import { SequelizeInsertPositionRepository } from '../../../repositories/create/sequelizeInsertPositionRepository';
+import { SequelizeSelectPositionRepository } from '../../../repositories/select/sequelizeSelectPositionRepository';
 import { CreateNewPositionController } from './createNewPositionController';
 import { CreateNewPositionUseCase } from './createNewPositionUseCase';
 

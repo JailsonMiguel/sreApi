@@ -1,4 +1,4 @@
-import { SequelizeUpdateSupervisedSchoolRepository } from '../../../repositories/supervisedSchools/update/sequelizeUpdateSupervisedSchoolRepository';
+import { SequelizeUpdateSupervisedSchoolRepository } from '../../../repositories/update/sequelizeUpdateSupervisedSchoolRepository';
 import { UpdateSupervisedSchoolController } from './updateSupervisedSchoolController';
 import { UpdateSupervisedSchoolUseCase } from './updateSupervisedSchoolUseCase';
 

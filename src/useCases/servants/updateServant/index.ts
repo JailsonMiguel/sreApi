@@ -1,4 +1,4 @@
-import { SequelizeUpdateServantRepository } from '../../../repositories/servants/update/sequelizeUpdateServantRepository';
+import { SequelizeUpdateServantRepository } from '../../../repositories/update/sequelizeUpdateServantRepository';
 import { UpdateServantController } from './updateServantController';
 import { UpdateServantUseCase } from './updateServantUseCase';
 

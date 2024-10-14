@@ -1,5 +1,5 @@
-import { IUpdateConsultantInterface } from '../../../interfaces/updatesInterfaces/IUpdateConsultantInterface';
-import { IUpdateConsultantRepository } from '../../../repositories/consultants/update/IUpdateConsultantInterfaceRepository';
+import { IUpdateConsultantRepository } from '../../../interfaces/repositories/update/IUpdateConsultantInterfaceRepository';
+import { IUpdateConsultantInterface } from '../../../interfaces/updates/IUpdateConsultantInterface';
 
 export class UpdateConsultantUseCase {
   constructor(

@@ -1,5 +1,5 @@
-import { IUpdateTypologyInterface } from '../../../interfaces/updatesInterfaces/IUpdateTypologyInterface';
-import { IUpdateTypologyRepository } from '../../../repositories/typologies/update/IUpdateTypologyInterfaceRepository';
+import { IUpdateTypologyRepository } from '../../../interfaces/repositories/update/IUpdateTypologyInterfaceRepository';
+import { IUpdateTypologyInterface } from '../../../interfaces/updates/IUpdateTypologyInterface';
 
 export class UpdateTypologyUseCase {
   constructor(private updateTypologyRepository: IUpdateTypologyRepository) {}

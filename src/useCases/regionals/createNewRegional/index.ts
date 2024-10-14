@@ -1,5 +1,5 @@
-import { SequelizeInsertRegionalRepository } from '../../../repositories/regionals/insert/sequelizeInsertRegionalRepository';
-import { SequelizeSelectRegionalRepository } from '../../../repositories/regionals/select/sequelizeSelectRegionalRepository';
+import { SequelizeInsertRegionalRepository } from '../../../repositories/create/sequelizeInsertRegionalRepository';
+import { SequelizeSelectRegionalRepository } from '../../../repositories/select/sequelizeSelectRegionalRepository';
 import { CreateNewRegionalController } from './createNewRegionalController';
 import { CreateNewRegionalUseCase } from './createNewRegionalUseCase';
 

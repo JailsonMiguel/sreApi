@@ -1,6 +1,6 @@
 import { IPositionProps } from '../../../interfaces/props/IPositionProps';
-import { IInsertPositionRepository } from '../../../repositories/positions/insert/IInsertPositionRepository';
-import { ISelectPositionRepository } from '../../../repositories/positions/select/ISelectPositionInterface';
+import { IInsertPositionRepository } from '../../../interfaces/repositories/create/IInsertPositionRepository';
+import { ISelectPositionRepository } from '../../../interfaces/repositories/select/ISelectPositionInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewPositionUseCase {
@@ -15,7 +15,9 @@ export class CreateNewPositionUseCase {
   }
   async handle(positionProps: IPositionProps) {
     const positionAlredyExists =
-      await this.selectPositionRepository.verifyIfAlredyBySubarea(positionProps);
+      await this.selectPositionRepository.verifyIfAlredyBySubarea(
+        positionProps
+      );
     if (positionAlredyExists) {
       throw new sreError('Função já cadastrada', 'Função já cadastrada');
     } else {

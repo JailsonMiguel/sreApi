@@ -1,4 +1,4 @@
-import { ISelectRegionalRepository } from '../../../repositories/regionals/select/ISelectRegionalInterface';
+import { ISelectRegionalRepository } from '../../../interfaces/repositories/select/ISelectRegionalInterface';
 
 export class GetAllRegionalsUseCase {
   private selectRegionalRepository: ISelectRegionalRepository;

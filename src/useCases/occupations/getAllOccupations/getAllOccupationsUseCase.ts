@@ -1,4 +1,4 @@
-import { ISelectOccupationRepository } from '../../../repositories/occupations/select/ISelectOccupationInterface';
+import { ISelectOccupationRepository } from "../../../interfaces/repositories/select/ISelectOccupationInterface";
 
 export class GetAllOccupationsUseCase {
   private selectOccupationRepository: ISelectOccupationRepository;

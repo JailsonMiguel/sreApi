@@ -1,5 +1,5 @@
-import { IUpdateServantInterface } from '../../../interfaces/updatesInterfaces/IUpdateServantInterface';
-import { IUpdateServantRepository } from '../../../repositories/servants/update/IUpdateServantInterfaceRepository';
+import { IUpdateServantRepository } from '../../../interfaces/repositories/update/IUpdateServantInterfaceRepository';
+import { IUpdateServantInterface } from '../../../interfaces/updates/IUpdateServantInterface';
 
 export class UpdateServantUseCase {
   constructor(private updateServantRepository: IUpdateServantRepository) {}

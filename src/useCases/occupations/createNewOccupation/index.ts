@@ -1,5 +1,5 @@
-import { SequelizeInsertOccupationRepository } from '../../../repositories/occupations/insert/sequelizeInsertOccupationRepository';
-import { SequelizeSelectOccupationRepository } from '../../../repositories/occupations/select/sequelizeSelectOccupationRepository';
+import { SequelizeInsertOccupationRepository } from '../../../repositories/create/sequelizeInsertOccupationRepository';
+import { SequelizeSelectOccupationRepository } from '../../../repositories/select/sequelizeSelectOccupationRepository';
 import { CreateNewOccupationController } from './createNewOccupationController';
 import { CreateNewOccupationUseCase } from './createNewOccupationUseCase';
 

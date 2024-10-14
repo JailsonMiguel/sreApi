@@ -1,6 +1,6 @@
 import { IRegionalProps } from '../../../interfaces/props/IRegionalProps';
-import { IInsertRegionalRepository } from '../../../repositories/regionals/insert/IInsertRegionalRepository';
-import { ISelectRegionalRepository } from '../../../repositories/regionals/select/ISelectRegionalInterface';
+import { IInsertRegionalRepository } from '../../../interfaces/repositories/create/IInsertRegionalRepository';
+import { ISelectRegionalRepository } from '../../../interfaces/repositories/select/ISelectRegionalInterface';
 import { sreError } from '../../../shared/errors/errors';
 
 export class CreateNewRegionalUseCase {

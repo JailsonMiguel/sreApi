@@ -1,5 +1,5 @@
-import { IUpdateInstituteInterface } from '../../../interfaces/updatesInterfaces/IUpdateInstituteInterface';
-import { IUpdateInstituteRepository } from '../../../repositories/institutes/update/IUpdateInstituteInterfaceRepository';
+import { IUpdateInstituteRepository } from '../../../interfaces/repositories/update/IUpdateInstituteInterfaceRepository';
+import { IUpdateInstituteInterface } from '../../../interfaces/updates/IUpdateInstituteInterface';
 
 export class UpdateInstituteUseCase {
   constructor(private updateInstituteRepository: IUpdateInstituteRepository) {}

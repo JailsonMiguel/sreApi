@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { UpdateConsultantUseCase } from './updateConsultantUseCase';
-import { IUpdateConsultantInterface } from '../../../interfaces/updatesInterfaces/IUpdateConsultantInterface';
+import { IUpdateConsultantInterface } from '../../../interfaces/updates/IUpdateConsultantInterface';
 
 export class UpdateConsultantController {
   constructor(private updateConsultantUseCase: UpdateConsultantUseCase) {}

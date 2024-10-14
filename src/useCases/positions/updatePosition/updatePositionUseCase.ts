@@ -1,5 +1,5 @@
-import { IUpdatePositionInterface } from '../../../interfaces/updatesInterfaces/IUpdatePositionInterface';
-import { IUpdatePositionRepository } from '../../../repositories/positions/update/IUpdatePositionInterfaceRepository';
+import { IUpdatePositionRepository } from '../../../interfaces/repositories/update/IUpdatePositionInterfaceRepository';
+import { IUpdatePositionInterface } from '../../../interfaces/updates/IUpdatePositionInterface';
 
 export class UpdatePositionUseCase {
   constructor(private updatePositionRepository: IUpdatePositionRepository) {}

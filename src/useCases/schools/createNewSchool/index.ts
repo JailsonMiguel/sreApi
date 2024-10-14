@@ -1,5 +1,5 @@
-import { SequelizeInsertSchoolRepository } from '../../../repositories/schools/insert/sequelizeInsertSchoolRepository';
-import { SequelizeSelectSchoolRepository } from '../../../repositories/schools/select/sequelizeSelectSchoolRepository';
+import { SequelizeInsertSchoolRepository } from '../../../repositories/create/sequelizeInsertSchoolRepository';
+import { SequelizeSelectSchoolRepository } from '../../../repositories/select/sequelizeSelectSchoolRepository';
 import { CreateNewSchoolController } from './createNewSchoolController';
 import { CreateNewSchoolUseCase } from './createNewSchoolUseCase';
 

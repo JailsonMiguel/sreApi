@@ -1,5 +1,5 @@
-import { SequelizeInsertTypologyRepository } from '../../../repositories/typologies/insert/sequelizeInsertTypologyRepository';
-import { SequelizeSelectTypologyRepository } from '../../../repositories/typologies/select/sequelizeSelectTypologyRepository';
+import { SequelizeInsertTypologyRepository } from '../../../repositories/create/sequelizeInsertTypologyRepository';
+import { SequelizeSelectTypologyRepository } from '../../../repositories/select/sequelizeSelectTypologyRepository';
 import { CreateNewTypologyController } from './createNewTypologyController';
 import { CreateNewTypologyUseCase } from './createNewTypologyUseCase';
 

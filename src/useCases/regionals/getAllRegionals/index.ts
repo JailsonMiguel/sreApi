@@ -1,4 +1,4 @@
-import { SequelizeSelectRegionalRepository } from '../../../repositories/regionals/select/sequelizeSelectRegionalRepository';
+import { SequelizeSelectRegionalRepository } from '../../../repositories/select/sequelizeSelectRegionalRepository';
 import { GetAllRegionalsController } from './getAllRegionalsController';
 import { GetAllRegionalsUseCase } from './getAllRegionalsUseCase';
 

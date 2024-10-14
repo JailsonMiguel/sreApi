@@ -1,4 +1,4 @@
-import { SequelizeSelectTypologyRepository } from '../../../repositories/typologies/select/sequelizeSelectTypologyRepository';
+import { SequelizeSelectTypologyRepository } from '../../../repositories/select/sequelizeSelectTypologyRepository';
 import { GetAllTypologiesController } from './getAllTypologiesController';
 import { GetAllTypologiesUseCase } from './getAllTypologiesUseCase';
 

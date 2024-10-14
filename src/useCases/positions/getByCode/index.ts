@@ -1,4 +1,4 @@
-import { SequelizeSelectPositionRepository } from '../../../repositories/positions/select/sequelizeSelectPositionRepository';
+import { SequelizeSelectPositionRepository } from '../../../repositories/select/sequelizeSelectPositionRepository';
 import { GetPositionByCodeController } from './getByCodeController';
 import { GetByCodeUseCase } from './getByCodeUseCase';
 
